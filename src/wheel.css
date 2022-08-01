@@ -1,0 +1,561 @@
+	.wheelFortune_container,
+	.wheelFortune_textContainer,
+	.wheelFortune_canvasImage_wheel,
+	.wheelFortune_wheelContainer,
+	.wheelFortune_fieldForm,
+	.wheelFortune_fieldPrize ,
+	.wheelFortune_formGridContainer,
+	.wheelFortune_prizeGridContainer,
+	.wheelFortune_prizeContent_head,
+	.wheelFortune_prizeContent_text,
+	.wheelFortune_prizeContent_get,
+	.wheelFortune_prizeContent_promo,
+	.wheelFortune_prizeImageContainer,
+	.wheelFortune_formGridContainer_formGrid,
+	.wheelFortune_formGridContainer_header,
+	.wheelFortune_formGridContainer_header_head,
+	.wheelFortune_formGridContainer_header_text,
+	.wheelFortune_FormGridInput,
+	.wheelFortune_FormGridButton,
+	.wheelFortune_FormGridButton_Passive,
+	.wheelFortune_FormGrid_accept,
+	.wheelFortune_FormGrid_accept_input,
+	.wheelFortune_FormGrid_accept_label,
+	.wheelFortune_formGridContainer_header_company,
+	.wheelFortune_container_closeContainer,
+	.wheelFortune_container_close,
+	.wheelFortune_canvasImage_cursor,
+	.wheelFortune_errorContainer,
+	.wheelFortune_trigerContainer,
+	.wheelFortune_trigerCanvasContainer,
+	.wheelFortune_trigerStringContainer,
+	.wheelFortune_trigerCanvas,
+	.wheelFortune_trigerString,
+	.wheelFortune_trigerStringClone,
+	.wheelFortune_canvasAnimateBorder {
+		box-sizing: border-box;
+		display: block;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		font-size: 16px;
+	}
+	.wheelFortune_container,
+	.wheelFortune_staticBox,
+	.wheelFortune_textContainer,
+	.wheelFortune_fieldPrize,
+	.wheelFortune_formGridContainer,
+	.wheelFortune_prizeGridContainer,
+	.wheelFortune_formGridContainer_formGrid,
+	.wheelFortune_trigerContainer,
+	.wheelFortune_trigerCanvasContainer,
+	.wheelFortune_trigerStringContainer,
+	.wheelFortune_trigerString {
+		display: grid;
+	}
+			
+	.wheelFortune_trigerString,
+	.wheelFortune_staticBox,
+	.wheelFortune_textContainer,
+	.wheelFortune_fieldPrize,
+	.wheelFortune_prizeGridContainer,
+	.wheelFortune_formGridContainer_formGrid,
+	.wheelFortune_trigerContainer,
+	.wheelFortune_trigerCanvasContainer,
+	.wheelFortune_trigerStringContainer {
+	  align-items: center;
+	  justify-items: center;
+	}
+
+	.wheelFortune_textContainer,
+	.wheelFortune_wheelContainer,
+	.wheelFortune_container_close,
+	.wheelFortune_FormGridButton,
+	.wheelFortune_trigerCanvasContainer,
+	.wheelFortune_trigerStringContainer,
+	.wheelFortune_canvasAnimateBorder {		
+		position: relative;
+	}
+
+	.wheelFortune_canvasImage_cursor,
+	.wheelFortune_fieldForm,
+	.wheelFortune_fieldPrize,
+	.wheelFortune_container_closeContainer,
+	/*.wheelFortune_trigerString, */
+	.wheelFortune_trigerCanvas {
+		position: absolute;
+	}
+	
+	.wheelFortune_container,
+	.wheelFortune_trigerContainer {
+		position: fixed;
+	}
+
+
+	.wheelFortune_container {
+	  margin-left: -100vmax;
+	  left: 0;
+	  top: 0;
+	  height: 100vh;
+	  background: rgba(0, 0, 0, .9);
+	  border: 2px inset gray;
+	  align-content: center;
+	  transition: margin-left .6s;
+	}
+
+	.wheelFortune_staticBox {
+	  user-select: none;
+	  z-index: 100;	  
+	  width: 100%;
+	  overflow-x: hidden;
+	  overflow-y: auto;
+		position: static;
+	  grid-template-columns: 1fr;
+	  grid-template-rows: minmax(395px, auto) max-content;
+	  justify-content: center;
+	}
+
+	.wheelFortune_textContainer {
+		order: 1;
+		z-index: 101;
+		perspective: 1500px;
+	  perspective-origin: center center;
+	  transform-style: preserve-3d;
+	  width: 100%;
+	  height: 100%;
+	  grid-template-columns: 1fr;
+	  grid-template-rows: 1fr;
+	}
+
+	.wheelFortune_wheelContainer {
+		order: 2;
+		z-index: 102;
+		width: 90vw;
+		height: 90vw;
+		margin: 5vw 5vw 5vw 5vw;
+		border-radius: 50%;
+	  overflow: hidden;
+		box-shadow: 0px 0px 4px rgba(255, 255, 255, .8), 0px 0px 6px rgba(0, 255, 0, .8);
+		transform: rotate(-90deg);
+	}
+
+	.wheelFortune_canvasImage_wheel {
+		border-radius: 50%;
+		width: 100%;
+	  background: rgba(255, 255, 255, .5);
+	}
+
+	.wheelFortune_canvasImage_cursor {
+		z-index: 103;
+		left: 50%;
+		top: 50%;
+		width: 15%;
+		transform-origin: 0 0;
+		transform:  translate(-6%, -38%);
+	}
+
+	.wheelFortune_fieldForm {
+	  backface-visibility: hidden;
+
+		transition: transform .8s;
+		/*transform: rotateY( 180deg);*/
+
+	}
+
+	.wheelFortune_fieldPrize {
+		z-index: 101;
+		width: 100%;
+	  grid-template-rows: 1fr;
+		grid-template-columns: .8fr;
+		justify-content: center;
+		
+		color: white;
+
+		transition: transform .8s;		
+		transform: rotateY( 180deg);
+	  backface-visibility: hidden;
+	}
+
+	.wheelFortune_container_closeContainer {
+		top: 6px;
+		right: 10px;
+		border-radius: 50%;
+		box-shadow: 1px 1px 2px rgba(255, 255, 255, .5), 3px 3px 4px green;
+	} 
+
+	.wheelFortune_container_close {
+		font-size: .7em;
+	  z-index: 200;
+	  border-radius: 50%;
+		padding: 2px 5px;
+	  font-weight: bold;
+	  color: rgba(0, 55, 0, 1);
+	  cursor: pointer;
+	  background-image: linear-gradient( 180deg, rgba(230, 255, 255, .5) 0%, black);
+	  opacity: .5;
+	  transition: transform 1s;
+	}
+
+	.wheelFortune_container_close:hover {
+		transform: rotate(360deg);
+		color: rgba(0, 100, 0, 1);
+	}
+
+	.wheelFortune_container_close:active {
+		left: 2px;
+		top: 2px;
+		box-Shadow: 0px 0px 0px rgba(255, 255, 255, .5), 0px 0px 2px green;
+	}
+
+	.wheelFortune_formGridContainer {
+		grid-template-rows: auto auto;
+		grid-template-columns: .9fr;
+		justify-content: center;
+		grid-gap: 1em;
+	}
+
+	.wheelFortune_prizeGridContainer {
+		grid-template-rows: auto;
+		grid-auto-rows: auto;
+		grid-template-columns: 1fr;
+		grid-gap: 1em;
+	}
+
+	.wheelFortune_formGridContainer_formGrid {
+		grid-template-rows: repeat(4, auto);
+		grid-auto-rows: auto;
+		grid-template-columns: 1fr;
+		grid-gap: 1em;
+	}
+
+	.wheelFortune_prizeContent_promo,
+	.wheelFortune_formGridContainer_header_head {
+		text-align: center;
+		color: white;
+		text-shadow: 1px 1px 3px red;
+		font-size: 2em;
+		padding: 0 0 4.8px;
+	}
+
+
+
+	.wheelFortune_prizeContent_text,
+	.wheelFortune_prizeContent_get,
+	.wheelFortune_prizeContent_promo,
+	.wheelFortune_formGridContainer_header_text {
+		line-height: 1.5;
+	}
+
+	.wheelFortune_prizeContent_promo{
+		border: 1px solid white;
+		border-radius: 15px;
+		padding: 10px 30px;
+		background: gray;
+		font-size: 1.5em;
+
+	}
+
+	.wheelFortune_formGridContainer_header_text,
+	.wheelFortune_formGridContainer_header_company,
+	.wheelFortune_prizeContent_text,
+	.wheelFortune_prizeContent_get {
+		text-shadow: 1px 1px 3px green, 2px 2px 2px black;
+	  color: white;
+	  text-align: center;
+	}
+
+	.wheelFortune_FormGridInput {
+		padding: 8px 4px;
+		border: 1.6px gray inset;
+	  border-radius: 32px;
+		text-align: center;
+	  background: rgba(240, 255, 240, .9);
+		text-shadow: 1px 1px 2px green, 0px 0px 2px yellow;
+		box-shadow: 1px 1px 1px rgba(255, 255, 255, .5), 2px 2px 1px green;
+		color: black;
+	}
+
+	.wheelFortune_FormGridInput:hover {
+		outline: 1px solid yellow;
+	}
+
+	.wheelFortune_FormGridInput:focus {
+		outline: 1px solid green;
+	}
+
+	.wheelFortune_FormGridButton,
+	.wheelFortune_FormGridButton_Passive {
+		justify-self: center;
+	  border: 1.6px gray inset;
+	  border-radius: 32px;
+	  padding: 8px 16px;
+	  text-shadow: 1px 1px 1px white;
+	  font-weight: bold;
+	  cursor: pointer;
+	  background-image: linear-gradient( 180deg, rgba(230, 255, 255, .5) 0%, black);
+	  transition: color .5s;
+	  outline: none;
+	}
+
+	.wheelFortune_FormGridButton {
+	  color: rgba(0, 55, 0, 1);
+	  box-shadow: 1px 1px 1px rgba(255, 255, 255, .5), 2px 2px 1px green;
+	}
+
+	.wheelFortune_FormGridButton:hover {
+			color: rgba(0, 100, 0, 1);
+	}
+
+	.wheelFortune_FormGridButton:active {
+		left: 2px;
+		top: 2px;
+		box-Shadow: 0px 0px 0px rgba(255, 255, 255, .5), 0px 0px 2px green;
+	}
+
+	.wheelFortune_FormGridButton_Passive{
+	  color:  black;
+		box-shadow: 2px 2px 4px rgba(255, 255, 255, .5),2px 2px 4px black;
+	}
+
+	.wheelFortune_FormGrid_accept {
+	  text-shadow: 1px 1px 2px green;
+	  text-align: center;
+	}
+
+	.wheelFortune_FormGrid_accept_input{
+		display: inline;
+	}
+
+	.wheelFortune_FormGrid_accept_label {
+	  color: white;
+		display: inline;
+		font-size: 13px;
+	}
+
+	.wheelFortune_errorContainer {
+		position: fixed;
+	 	padding: 5px 9px;
+		border: 1px solid red;
+		border-radius: 15px;
+		background: rgba(230, 230, 230, 1);
+		color: red;
+		font-style: italic;
+		text-align: center;
+		text-shadow: 1px 1px 2px black;
+		box-shadow: 2px 2px 4px black;
+		z-index: 100;
+	}
+
+	.wheelFortune_FormGridInput.wheelFortune_errorClass::placeholder {
+		color: red;
+	}
+
+	.wheelFortune_trigerContainer {
+		bottom: 4vmin;
+		left: 2vmin;
+		border: 1px inset gray;
+		border-radius: 10vmin;
+		padding: 5px;
+		width: auto;
+		max-width: 95vw;
+		height: calc(12vmin + 12px);
+		box-shadow: 2px 2px 4px black, 1.5px 1.5px 3px white;
+		grid-template-columns: auto auto;
+		grid-template-rows: 1fr;
+		grid-gap: 0px;
+		justify-content: start;
+		background: rgba(230, 230, 230, .7);
+	  color: black;
+		text-shadow: 1px 1px 2px  green, 2px 2px 3px black;
+	  text-align: center;
+	}
+
+	.wheelFortune_trigerCanvasContainer {
+		width: 12vmin;
+		height: 12vmin;
+		border-radius: 50%;
+	}
+
+	.wheelFortune_trigerCanvas {
+		box-sizing: content-box;
+		left: 0;
+		top: 0;
+		z-index: 150;
+		margin-left: -20vmin;
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	.wheelFortune_canvasAnimateBorder {
+		height: calc(100% + 10px);
+		width: calc(100% + 10px);
+		border: dotted 4px red;
+		padding: 1px;
+		border-radius: 50%;
+		opacity: 0;
+		animation-name: wheelFortune_trigerAnimation;
+		animation-duration: 9s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	.wheelFortune_trigerString {
+		/*border:  1px solid blue;*/
+		padding: 0 5px;
+		width: 100%;
+		top: 0;
+		font-size: .9em;
+	}
+
+	.wheelFortune_trigerStringClone {
+
+		padding: 0 5px;
+		width: 100%;
+		visibility: hidden;
+		font-size: .9em;
+	}
+	
+
+	@keyframes wheelFortune_trigerAnimation {
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+		0%, 30%, 60% {
+			border-color: red;
+		}
+		10%, 40%, 70% {
+			border-color: green;
+		}
+		20%, 50%, 80% {
+			border-color: blue;
+		}
+		90% {
+			border-color: orange;
+		}
+
+	}
+
+
+	@media (min-width: 568px) and (max-width: 1280px) {
+		.wheelFortune_container {	
+			max-width: 512px;
+			grid-template-columns: 512px;
+			justify-content: center;
+			left: calc( (100vw - 512px)/2) ;
+			height: 100vh;	
+		}
+
+		.wheelFortune_staticBox {
+		  user-select: none;
+		  z-index: 100;	  
+		  width: 100%;
+		}
+		.wheelFortune_wheelContainer {
+			order: 2;
+			width: 90%;
+			height: auto;
+			margin: 5%;
+		}
+
+		.wheelFortune_trigerContainer {
+			bottom: 2vmin;
+			max-width: 50vw;
+			height: calc(8vmin + 12px);
+		}
+
+		.wheelFortune_trigerCanvasContainer {
+			width: 8vmin;
+			height: 8vmin;
+		}
+
+		.wheelFortune_trigerString,
+		.wheelFortune_trigerStringClone {
+			padding: 0 10px;
+		}
+
+	}
+
+	@media (min-width: 1281px) {
+		.wheelFortune_container {
+		  border-width: 4px;
+		  border-radius: 15px;
+			left: 1.5vmin;
+		  top: 0;
+		  margin-top: 1.5vh;
+		  width: auto;
+			height: 97vh;
+		  align-content: stretch;
+		}
+
+		.wheelFortune_staticBox {
+		  overflow-y: visible;
+			grid-template-columns: auto auto;
+			grid-template-rows: auto;
+		}
+
+		.wheelFortune_textContainer {
+			order: 2;
+			width: 512px;
+		}
+
+		.wheelFortune_wheelContainer {
+			order: 1;
+			align-self: center;
+			width: 80vmin;
+			height: 80vmin;
+			margin: 1vmin;
+			margin-left: 10vmin;
+			transform: rotate(0deg);
+			box-shadow: 0px 0px 4px rgba(255, 255, 255, .8), 0px 0px 10px rgba(0, 255, 0, .8);
+		}
+
+		.wheelFortune_formGridContainer {
+			grid-gap: 3em;
+		}
+
+		.wheelFortune_formGridContainer_formGrid {
+			grid-gap: 1.2em;
+		}
+
+		.wheelFortune_formGridContainer_header_head {
+		  font-size: 3em;
+		}
+
+		.wheelFortune_prizeContent_head {
+			font-size: 3em;
+		}
+
+		.wheelFortune_prizeContent_text,
+		.wheelFortune_prizeContent_get,
+		.wheelFortune_formGridContainer_header_text,
+		.wheelFortune_formGridContainer_header_company,
+		.wheelFortune_FormGridInput,
+		.wheelFortune_FormGridButton,
+		.wheelFortune_FormGridButton_Passive,
+		.wheelFortune_errorContainer {
+			font-size: 1.3em;			
+		}
+
+		.wheelFortune_trigerContainer {
+			bottom: 2vmin;
+			max-width: 40vw;
+			height: calc(8vmin + 12px);
+			user-select: none;
+		}
+
+		.wheelFortune_trigerCanvasContainer {
+			width: 8vmin;
+			height: 8vmin;
+		}
+
+		.wheelFortune_trigerString,
+		.wheelFortune_trigerStringClone {
+			padding: 0 10px;
+			font-size: 1.2em;
+		}
+	}
